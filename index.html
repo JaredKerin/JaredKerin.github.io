@@ -3,54 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jared Kerin</title>
+    <title>Jared Kerin's Website</title>
     <link rel="stylesheet" href="Main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script defer src="main.js"></script>
   </head>
   <body>
-    <div id="toprow" class="toprow">
-      <div id="headerL" class="headerL">
-        <div id="title" class="title"><h1>Jared Kerin</h1></div>
-      </div>
-      <div id="headerR" class="headerR">
-        <div id="nav" class="nav">
-          <a href="About.html">About</a>
-          <a href="404.html">Projects</a>
-          <a href="404.html">Connect</a>
+    <div class="wrapper">
+      <header>
+        <div class="container">
+          <img src="personalphoto.jpeg" alt="Your Name" class="profile-img" />
+          <h1>Jared Kerin</h1>
+          <p>
+            Software Development and Cyber Security Student at Marist College
+          </p>
         </div>
-      </div>
+      </header>
+      <main>
+        <section class="projects">
+          <div class="container">
+            <h2>My Projects</h2>
+            <div class="project-list">
+              <div class="project">
+                <h3>Small Business Shipping Web Application</h3>
+                <p>
+                  Business web application using Flask, HTML, CSS, JavaScript,
+                  and MySQL. Implemented Plotly to visually present shipping
+                  data to users. Created a complex algorithm to calculate
+                  comprehensive shipping quotes for small businesses. Enabled
+                  tracking of spending, billing, and package types, providing a
+                  complete solution for small business shipping management.
+                </p>
+              </div>
+              <div class="project">
+                <h3>Network Automation Form</h3>
+                <p>
+                  Developed a router request tool using python to automate the
+                  creation of router configurations. Contributed to streamlining
+                  network management processes and improving operational
+                  efficiency for over 100 new routers.
+                </p>
+              </div>
+              <div class="project">
+                <h3>Task Management System</h3>
+                <p>
+                  Developed a SQL database management system designed to help
+                  users organize tasks efficiently. This system included a
+                  public calendar for scheduling and tracking events, a task
+                  board for managing and visualizing task progress, and a
+                  checklist for ensuring task completion. The application
+                  incorporated an interactive GUI, making it user-friendly and
+                  intuitive, allowing users to easily navigate and utilize all
+                  the features.
+                </p>
+              </div>
+              <!-- Add more projects as needed -->
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
-    <div id="middlerow" class="middlerow">
-      <div id="mid1" class="mid1"></div>
-      <div id="vl" class="vl"></div>
-      <div id="mid2" class="mid2">
-        <div id="midtext" class="midtext">
-          <div id="midtitle" class="midtitle">
-            <h1>Computer Science & Cyber Security Student</h1>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-left">
+            <p>&copy; 2024 Jared Kerin. All rights reserved.</p>
           </div>
-          <div id="midtitletext" class="midtitletext">
-            Welcome to my personal website! I am a Computer Science major with a
-            Cyber Security minor at Marist College, where my academic path has
-            equipped me with a deep and practical understanding of these fields.
-            Known for my dedication and strong problem-solving skills, I embrace
-            challenges and value collaboration in pursuit of innovative
-            solutions. The dynamic nature of technology continually inspires me
-            to explore diverse career paths and see where my skills and passions
-            align best. Here, you'll find insights into my projects and
-            achievements as I navigate the exciting possibilities ahead. I
-            invite you to explore and connect.
-          </div>
-          <div id="mainbutton" class="mainbutton">
-            <button id="button1" class="button1">Learn More</button>
-          </div>
-        </div>
-        <div id="midpicture" class="midpicture">
-          <div id="personalphoto" class="personalphoto">
-            <img src="personalphoto.jpeg" alt="picture of me" />
+          <div class="footer-right">
+            <a href="https://github.com/JaredKerin" target="_blank"
+              ><i class="fab fa-github"></i> GitHub</a
+            >
+            <a
+              href="https://www.linkedin.com/in/jared-kerin-481697251/"
+              target="_blank"
+              ><i class="fab fa-linkedin"></i> LinkedIn</a
+            >
           </div>
         </div>
       </div>
-      <div id="mid3" class="mid3"></div>
-    </div>
-    <div id="bottomrow" class="bottomrow"></div>
+    </footer>
   </body>
 </html>
