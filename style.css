@@ -1,0 +1,87 @@
+/* General Reset */
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%; /* Full height for the background */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Background Image */
+.background-image {
+    background-image: url('spacebackgroud.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Ensures full viewport height */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center;
+}
+
+/* Logo Container with Animations */
+.logo-container {
+    position: relative;
+    margin-bottom: 20px; /* Adds space between name and navigation */
+}
+
+.logo-container::before {
+    content: "";
+    position: absolute;
+    top: calc(100% - 2px);
+    width: 100%;
+    height: 4px;
+    background-color: #f39c12;
+    transform-origin: center center;
+    transform: scaleX(0);
+    animation: line-animation 3s ease infinite alternate;
+    animation-iteration-count: 1;
+}
+
+h1#page-logo {
+    font: bold 4rem 'Arial', sans-serif; /* Adjusted font size for better scaling */
+    color: rgb(0, 34, 78);
+    margin: 0;
+    animation: clip-path-reveal-1 3s ease infinite alternate;
+    animation-iteration-count: 1;
+    font-size: 7.0em
+}
+
+/* Navigation Tabs */
+.navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between tabs */
+    padding: 0;
+    margin: 0;
+}
+
+.navigation a {
+    color: rgb(48, 81, 151);
+    text-decoration: none;
+    font-size: 2.0em;
+    transition: color 0.3s;
+}
+
+.navigation a:hover {
+    color: #f39c12;
+}
+
+/* Keyframe Animations */
+@keyframes line-animation {
+    0% { transform: scaleX(0); }
+    15% { transform: scaleX(0); }
+    20%, 25% { transform: scaleX(1); top: calc(100% - 2px); }
+}
+
+@keyframes clip-path-reveal-1 {
+    0% { clip-path: inset(0 100% 0 0); }
+    100% { clip-path: inset(0 0 0 0); }
+}
