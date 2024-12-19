@@ -5,10 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
     <link rel="stylesheet" href="projects-style.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
+    <div class="burger-menu">
+        <div class="burger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="dropdown-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    
     <div class="section bg1">
         <div class="revealUp">
             <div class="LeftSide">
@@ -21,7 +37,10 @@
                     precision score, prediction counts, and target percentages.</p>
             </div>
             <div class="RightSide">
-                <img src=" " alt="Project 1">
+                <video controls>
+                    <source src="video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
     </div>
@@ -29,16 +48,14 @@
     <div class="section bg1">
         <div class="revealUp">
             <div class="LeftSide">
-                <h1>Project 2: </h1>
-                <p>Flask application to predict S&P 500 stock movements using
-                    historical data fetched with yfinance and a
-                    RandomForestClassifier model. The application processes the
-                    data, trains the model, and performs backtesting to evaluate
-                    predictions. An HTML template was created to display the
-                    precision score, prediction counts, and target percentages.</p>
+                <h1>Project 2: Tsiram virtual 6502 processor</h1>
+                <p>Object Oriented Programming project in Computer Organization and Architecture class. Written in TypeScript and running on Node.js</p>
             </div>
             <div class="RightSide">
-                <img src="" alt="Project 1">
+                <video controls>
+                    <source src="TsiramClip.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
     </div>
@@ -46,13 +63,8 @@
     <div class="section bg1">
         <div class="revealUp">
             <div class="LeftSide">
-                <h1>Project 3: Machine Learining Stock Predictor</h1>
-                <p>Flask application to predict S&P 500 stock movements using
-                    historical data fetched with yfinance and a
-                    RandomForestClassifier model. The application processes the
-                    data, trains the model, and performs backtesting to evaluate
-                    predictions. An HTML template was created to display the
-                    precision score, prediction counts, and target percentages.</p>
+                <h1>Project 3: Small Business Shipping Web Application</h1>
+                <p>Business web application using Flask, HTML, CSS, JavaScript, and MySQL. Implemented Plotly to visually present shipping data to users. Created a complex algorithm to calculate comprehensive shipping quotes for small businesses. Enabled tracking of spending, billing, and package types, providing a complete solution for small business shipping management.</p>
             </div>
             <div class="RightSide">
                 <img src=" " alt="Project 1">
@@ -62,5 +74,5 @@
     <div class="spacer"></div>
 </div>
 </body>
-<script src="projects-script.js"></script>
+<script src="main-script.js"></script>
 </html>

@@ -87,3 +87,72 @@ h1#page-logo {
 }
 
 
+.burger-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.burger-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+}
+
+.burger-icon span {
+    display: block;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-menu li {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.dropdown-menu a:hover {
+    color: #f39c12;
+}
+
+.burger-menu.open .dropdown-menu {
+    display: flex;
+}
+
+.burger-menu.open .burger-icon span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.burger-menu.open .burger-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.open .burger-icon span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}

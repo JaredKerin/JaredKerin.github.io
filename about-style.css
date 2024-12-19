@@ -16,7 +16,7 @@ body {
 }
 
 .section {
-  height: 90vh;
+  height: 100%;
   width: 100%;
   position: relative;
   padding: 0 5%;
@@ -50,11 +50,6 @@ h1 {
   visibility: hidden;
 }
 
-.spacer {
-  height: 1vh;
-  background-color: #000;
-}
-
 /* Styling for Left and Right Side */
 .LeftSide {
   flex: 1; /* Take up equal width */
@@ -82,16 +77,6 @@ h1 {
   border-radius: 10px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
   object-fit: contain; /* Preserve aspect ratio */
-}
-
-.RightSide video {
-  width: 90%; /* Adjust the width as needed */
-  max-width: 500px; /* Set a maximum width */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 10px; /* Optional: add rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add a shadow for a polished look */
-  margin: 0 auto; /* Center the video horizontally */
-  display: block; /* Ensure it's treated as a block element */
 }
 
 /* Responsive Design */
