@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="about-style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
+    <!-- Burger Menu -->
     <div class="burger-menu">
         <div class="burger-icon" onclick="toggleMenu()">
             <span></span>
@@ -24,13 +23,18 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
-    <div class="section bg1">
-        <div class="revealUp">
-            <div>
-            <h1>Connect With Me!</h1>
-        </div>
+
+    <!-- Centered Contact Section -->
+    <div class="contact-section">
+        <h1>Connect With Me!</h1>
+        <p>Feel free to reach out through any of the channels below!</p>
+        <div class="contact-icons">
+            <a href="https://github.com/JaredKerin" target="_blank"><img class="icon" src="github-icon.webp" alt="Github"></a>
+            <a href="https://www.linkedin.com/in/jared-kerin-481697251/" target="_blank"><img class="icon" src="linkedin-icon.png" alt="LinkedIn"></a>
+            <a href="mailto:jared.kerin1@marist.edu"><img class="icon" src="email-icon.webp" alt="Email"></a>
         </div>
     </div>
+
+    <script src="main-script.js"></script>
 </body>
-<script src="main-script.js"></script>
 </html>
