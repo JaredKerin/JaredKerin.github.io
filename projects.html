@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" class="allow-scroll">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jared Kerin | Projects</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- GSAP core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- ScrollTrigger plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <style>
+      html.allow-scroll,
+      body {
+        height: auto !important;
+        overflow: auto !important;
+      }
+      .revealUp {
+        opacity: 0;
+      } /* prevent flash before GSAP runs */
+    </style>
+  </head>
+  <body>
+    <div class="page projects-page">
+      <header class="site-header">
+        <div class="burger-menu">
+          <div class="burger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <main class="projects-wrap">
+        <!-- Project 1 -->
+        <section class="project-section revealUp">
+          <div class="project-text">
+            <h1>Delivery Assistant for Seasonal Help (DASH)</h1>
+            <h2 class="project-subtitle">Hackathon Project</h2>
+            <p>
+              Developed an AI-driven Retrieval-Augmented Generation (RAG)
+              application that <strong>won 1st place</strong> out of 85+ global
+              teams in the Google vendor and employee engagement categories. The
+              platform demonstrated advanced retrieval, context-aware responses,
+              and practical integration of generative AI into real-world
+              workflows.
+            </p>
+            <p class="tools">
+              <strong>Tools:</strong> ReactJS, AstraDB, TypeScript, Vertex AI,
+              GPT-3.5, Docker, Google Cloud
+            </p>
+          </div>
+          <div class="project-img">
+            <video
+              src="videos/DASHVideo.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+            ></video>
+          </div>
+        </section>
+
+        <!-- Project 2 -->
+        <section class="project-section revealUp">
+          <div class="project-text">
+            <h1>MITRE Mapper</h1>
+            <h2 class="project-subtitle">Team Lead/Capstone Project</h2>
+            <p>
+              Converted a console-based vulnerability prioritization tool that
+              leverages GPT-4o into a web-based application with an interactive
+              dashboard, improving usability and accessibility for security
+              practitioners. Enhanced decision-making by implementing
+              Retrieval-Augmented Generation (RAG) techniques to strengthen
+              vulnerability-to-threat mapping and provide actionable insights.
+            </p>
+            <p class="tools">
+              <strong>Tools:</strong> ReactJS, TypeScript, GPT-4o, Node.js,
+              Express, MongoDB
+            </p>
+          </div>
+          <div class="project-img">
+            <img src="images/MITRElogo.png" alt="MITRE" />
+          </div>
+        </section>
+        <!-- Project 3 -->
+        <section class="project-section revealUp">
+          <div class="project-text">
+            <h1>Tsiram Virtual 6502 Processor</h1>
+            <h2 class="project-subtitle">
+              Computer Organization and Architecture Project
+            </h2>
+            <p>
+              Built a virtual 6502 processor as part of a Computer Organization
+              and Architecture course. The processor was implemented in
+              TypeScript and executed on Node.js, designed around a fully
+              object-oriented programming structure for modularity and
+              maintainability. The system accepts 6502 op-code programs and runs
+              them through a simulated CPU pipeline, including fetch, decode,
+              execute, write-back, and interrupt handling stages. This project
+              deepened my understanding of low-level processor design,
+              instruction sets, and the relationship between hardware
+              architecture and software.
+            </p>
+            <p class="tools">
+              <strong>Tools:</strong> TypeScript, Node.js, 6502 Instruction Set
+            </p>
+          </div>
+          <div class="project-img">
+            <video
+              src="videos/TsiramClip.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+            ></video>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        © <span id="year"></span> Jared Kerin · Projects
+      </footer>
+    </div>
+    <script src="script/main.js"></script>
+  </body>
+</html>

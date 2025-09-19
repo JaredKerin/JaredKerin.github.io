@@ -1,0 +1,729 @@
+:root {
+  /* Replace this with your own image URL */
+  /* styles.css is inside css/, so images are ../images/ */
+  --bg-image: url("../images/spacebackgroud.jpg");
+  --overlay: rgba(10, 12, 16, 0.55);
+  --text: #f7f7f7;
+  --white: #f7f7f7;
+  --gray: #bbd0e6;
+  --accent: #64b5f6;
+  --accent-2: #f39c12;
+  --card-bg: rgba(255, 255, 255, 0.06);
+  --card-border: rgba(255, 255, 255, 0.18);
+  --radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--text);
+  background: #0b0f14;
+}
+
+/* Fullscreen background */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  overflow: visible;
+  isolation: isolate;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.9);
+  z-index: -2;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    65% 65% at 50% 50%,
+    var(--overlay) 0%,
+    rgba(10, 12, 16, 0.85) 100%
+  );
+  z-index: -1;
+}
+
+.container {
+  text-align: center;
+  padding: 2rem;
+  width: min(900px, 92vw);
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+.typing {
+  display: inline-block;
+  border-right: none;
+  padding-right: 0;
+  white-space: nowrap;
+  overflow: visible;
+  min-width: 12ch;
+  padding-bottom: 0.08em;
+  line-height: 1.2;
+}
+.typing .word-1 {
+  color: var(--gray);
+}
+.typing .word-2 {
+  color: var(--white);
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: #dfe7ef;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text);
+  padding: 0.65rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(6px);
+  border-radius: 999px;
+  font-weight: 600;
+  transition: transform 180ms cubic-bezier(.2,.8,.2,1),
+    box-shadow 180ms cubic-bezier(.2,.8,.2,1),
+    background-color 180ms linear,
+    border-color 180ms linear;
+  will-change: transform, box-shadow;
+}
+nav a:hover,
+nav a:focus {
+  transform: translateY(-4px) scale(1.03);
+  background: linear-gradient(
+    180deg,
+    rgba(243,156,18,0.12),
+    rgba(243,156,18,0.06)
+  );
+  border-color: rgba(235, 179, 89, 0.9);
+  box-shadow: 0 10px 24px rgba(2,6,23,0.42), 0 0 28px rgba(243,156,18,0.14);
+  outline: none;
+  color: #ffffff;
+}
+nav a:active {
+  transform: translateY(-1px) scale(0.995);
+  box-shadow: 0 6px 14px rgba(2,6,23,0.36), 0 0 18px rgba(243,156,18,0.12);
+  background: linear-gradient(
+    180deg,
+    rgba(243,156,18,0.14),
+    rgba(243,156,18,0.08)
+  );
+  border-color: rgb(245, 175, 63);
+  color: #ffffff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  nav a,
+  nav a:hover,
+  nav a:focus,
+  nav a:active {
+    transition: none;
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+.hint {
+  margin-top: 2.25rem;
+  font-size: 0.95rem;
+  color: #c8d6e5;
+  opacity: 0.85;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 420px) {
+  .container {
+    padding: 1rem;
+    width: 94vw;
+  }
+  .typing {
+    font-size: 1.9rem;
+    min-width: 0;
+  }
+  h1 {
+    font-size: clamp(1.6rem, 7vw, 2.25rem);
+  }
+}
+
+/* ============================= */
+/* Extra styles for About page   */
+/* ============================= */
+.page {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  isolation: isolate;
+}
+.page::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.9);
+  z-index: -2;
+}
+.page::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(65% 65% at 50% 50%, var(--overlay) 0%, rgba(10,12,16,0.88) 100%);
+  z-index: -1;
+}
+
+.wrap {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+  display: grid;
+  grid-template-columns: 1.05fr 1.25fr;
+  gap: min(4vw, 2.5rem);
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .wrap { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 22px rgba(0,0,0,.22);
+  overflow: hidden;
+}
+
+/* Remove border/background from the photo card */
+.card.photo {
+  border: none;
+  background: transparent;
+  box-shadow: none; /* optional, removes drop shadow too */
+}
+
+
+.photo {
+  aspect-ratio: 4/5;
+  display: grid;
+  place-items: center;
+  /* make photo background transparent so the image sits on the page background */
+  background: transparent;
+}
+.photo__inner {
+  width: 100%; height: 100%;
+  display: grid; place-items: center;
+  color: var(--gray);
+  text-align: center; padding: 1rem;
+  /* transparent inner background */
+  background: transparent;
+  border-radius: calc(var(--radius) - 6px);
+}
+.photo__inner p { margin: .3rem 0 0; font-size: .95rem; }
+
+.content { padding: min(3vw, 2rem); }
+.content h1 {
+  margin: 0 0 .25rem;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+}
+.content h2 {
+  margin: 0 0 .75rem;
+  font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+  font-weight: 600;
+  color: var(--gray);
+}
+.school {
+  margin: 0 0 1.25rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+.content p {
+  margin: 0;
+  line-height: 1.7;
+  font-weight: 400;
+  color: #e9f0f8;
+}
+
+/* --- One screen layout: prevent page scroll --- */
+html, body { height: 100%; overflow: hidden; } /* no page scroll */
+.page { min-height: 100vh; }
+:root {
+  --header-h: 56px;
+  --footer-h: 26px;
+}
+
+/* Keep header/footer fixed-height so main can size itself precisely */
+.site-header {
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 .75rem;
+  position: relative;
+  z-index: 2;
+}
+.site-footer {
+  position: absolute;
+  bottom: 6px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--gray);
+}
+
+.wrap.one-screen {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: .75rem 1rem;
+  height: calc(100vh - var(--header-h) - var(--footer-h));
+  display: grid;
+  /* Image gets more width (min 240px, max 380px), text fills rest */
+  grid-template-columns: clamp(240px, 32vw, 380px) 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+
+/* Cards compact to fit vertically without scrolling */
+.photo-img {
+  /* constrain the image so it doesn't fill the whole card — keeps it smaller and centered */
+  width: auto;
+  max-width: 340px; /* desktop size, adjust to taste */
+  height: auto;
+  max-height: 76vh;
+  object-fit: cover; /* crop neatly when constrained */
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+/* On wider screens make the portrait fill the photo card so there are no gray gutters
+   Keep the constrained centered thumbnail behavior on small screens via the existing rules. */
+/* Base (desktop) */
+.wrap.one-screen {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: .75rem 1rem;
+  height: calc(100vh - var(--header-h) - var(--footer-h));
+  display: grid;
+  /* Photo column is healthy but not huge; text takes the rest */
+  grid-template-columns: clamp(240px, 32vw, 380px) 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* Photo sizing: tall, width auto, capped so it doesn't sprawl */
+.photo-img {
+  height: calc(90vh - 110px);  /* tall but fits header/footer */
+  width: auto;                 /* prevent stretching */
+  max-width: 100%;             /* never overflow its column */
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border-radius: inherit;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .wrap.one-screen {
+    grid-template-columns: clamp(200px, 40vw, 300px) 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Phablet */
+@media (max-width: 780px) {
+  .wrap.one-screen {
+    /* keep the clamped photo column so the image still looks substantial */
+    grid-template-columns: clamp(180px, 44vw, 260px) 1fr;
+    gap: .85rem;
+  }
+  .content { padding: .85rem 1rem; }
+  .content h1 { font-size: clamp(1.4rem, 4.2vw, 1.9rem); }
+  .content h2 { font-size: clamp(0.9rem, 2.8vw, 1.05rem); }
+  .bio {
+    display: -webkit-box;
+    -webkit-line-clamp: 12;
+    line-clamp: 12;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* Small phones */
+/* Phones: allow vertical scrolling + natural heights */
+@media (max-width: 560px) {
+  html, body {
+    height: auto;          /* stop forcing 100vh */
+    overflow: auto;        /* re-enable scroll on small screens */
+  }
+
+  .page {
+    min-height: 100%;      /* natural document height */
+  }
+
+  .wrap.one-screen {
+    height: auto;          /* let content define height */
+    grid-template-columns: 1fr;     /* stack image over text */
+    grid-template-rows: auto auto;
+    gap: 1.25rem;
+    padding-bottom: 4rem;  /* breathing room above footer */
+  }
+
+  .photo-img {
+    height: auto;          /* let image size naturally */
+    width: 100%;
+    max-width: 320px;      /* nice portrait width */
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+
+  .content {
+    padding: 1rem;
+    text-align: center;    /* optional—remove if you prefer left align */
+  }
+}
+
+
+
+.burger-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.burger-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+}
+
+.burger-icon span {
+    display: block;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-menu li {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.dropdown-menu a:hover {
+    color: #f39c12;
+}
+
+.burger-menu.open .dropdown-menu {
+    display: flex;
+}
+
+.burger-menu.open .burger-icon span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.burger-menu.open .burger-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.open .burger-icon span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Disable page scrolling while menu is open (belt + suspenders) */
+.no-scroll { overflow: hidden; }
+
+
+/* Experience page layout (scrollable, full-height sections) */
+.xp-wrap {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: clamp(12px, 2vw, 24px) clamp(16px, 3vw, 28px) clamp(40px, 6vh, 64px);
+  display: grid;
+  gap: clamp(20px, 6vh, 70px); /* space between each full-page section */
+}
+
+/* Each experience takes about one screen height */
+.xp-section {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; /* left text | right image */
+  align-items: center;
+  gap: clamp(16px, 4vw, 36px);
+}
+
+/* Text side */
+.xp-text {
+  max-width: 90ch;
+}
+.xp-title {
+  margin: 0 0 .5rem 0;
+  font-size: clamp(1.6rem, 3.8vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: .01em;
+}
+.xp-text p {
+  margin: 0;
+  line-height: 1.7;
+  color: #e9f0f8;
+  font-size: clamp(1rem, 1.6vw, 1.125rem);
+}
+
+/* Image side */
+.xp-media {
+  display: grid;
+  place-items: center;
+}
+.xp-image {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: cover;
+  border-radius: 12px; /* subtle; remove if you want perfectly sharp corners */
+}
+
+/* Responsive: stack on small screens (image below text or above if preferred) */
+@media (max-width: 800px) {
+  .xp-section {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    min-height: 100vh; /* still roughly a screen per section */
+  }
+  /* Make image appear below text; swap order if you want image on top */
+  .xp-text { order: 1; text-align: left; }
+  .xp-media { order: 2; }
+  .xp-image { max-height: 50vh; }
+}
+
+/* Optional: left-align headings & give a bit more breathing room on very small phones */
+@media (max-width: 560px) {
+  .xp-title { font-size: clamp(1.4rem, 6vw, 1.8rem); }
+  .xp-wrap { gap: 48px; }
+}
+
+/* ============================= */
+/* Fixed background (parallax)   */
+/* ============================= */
+
+/* Pin the background and overlay so they don't scroll */
+.page::before,
+.page::after {
+  position: fixed !important; /* instead of absolute */
+  inset: 0;
+  /* keep your existing background image and overlay gradient */
+  pointer-events: none;        /* make sure they don't block clicks */
+}
+
+/* Ensure content sits above the fixed layers */
+.page,
+.xp-wrap,
+.xp-section {
+  position: relative;
+  z-index: 0;
+}
+
+/* Since other pages may be no-scroll by default, this page is scrollable (already enabled via inline <style> in experience.html) */
+
+/* Projects page layout */
+/* Allow scrolling on the Projects page */
+.projects-page {
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.projects-page .projects-wrap {
+  height: auto; /* let content define height */
+  display: block;
+}
+
+.project-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  min-height: 100vh; /* each project fills a screen */
+  padding: 2rem;
+}
+
+.project-text h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.project-text p {
+  margin: 0 0 1rem;
+  line-height: 1.6;
+  color: #e9f0f8;
+}
+
+.project-text .tools {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.project-img img {
+  width: 100%;
+  max-height: 80vh;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+@media (max-width: 768px) {
+  .project-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .project-img img {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* Shared media styling for images and videos */
+.project-img img,
+.project-img video,
+.xp-media img,
+.xp-media video {
+  width: 100%;
+  max-height: 80vh;
+  object-fit: cover;   /* crop/scale nicely */
+  border-radius: var(--radius);
+  display: block;
+}
+
+/* Make videos responsive */
+.project-img video,
+.xp-media video {
+  height: auto;           /* keep natural aspect ratio */
+  background: #000;       /* black background while loading */
+  outline: none;
+}
+
+/* Optional: add subtle controls styling */
+.project-img video::-webkit-media-controls-panel,
+.xp-media video::-webkit-media-controls-panel {
+  background-color: rgba(0,0,0,0.4);
+}
+
+.project-subtitle {
+  margin: 0 0 1rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 500;
+  color: var(--accent-2); /* orange accent from your theme */
+  letter-spacing: 0.5px;
+}
+
+/* Contact Page */
+.contact-wrap {
+  min-height: calc(100vh - var(--header-h) - var(--footer-h));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.contact-box {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius);
+  padding: 2rem 3rem;
+  text-align: center;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.3);
+}
+
+.contact-box h1 {
+  margin-bottom: 1.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.contact-icons a {
+  color: var(--white);
+  font-size: 2rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.contact-icons a:hover {
+  color: var(--accent-2); /* highlight color */
+  transform: scale(1.2);
+}
+

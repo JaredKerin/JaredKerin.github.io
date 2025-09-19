@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" class="allow-scroll">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jared Kerin | Experience</title>
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- GSAP core + ScrollTrigger (for revealUp animations) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Page-specific overrides to re-enable scrolling (your global CSS disables it) -->
+    <style>
+      html.allow-scroll,
+      body {
+        height: auto !important;
+        overflow: auto !important;
+      }
+      .revealUp {
+        opacity: 0;
+      } /* prevent flash before GSAP runs */
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <!-- Burger -->
+        <div class="burger-menu">
+          <div
+            class="burger-icon"
+            onclick="toggleMenu()"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </div>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <main class="xp-wrap" role="main">
+        <!-- ===== Experience 1 ===== -->
+        <section class="xp-section revealUp">
+          <div class="xp-text">
+            <h2 class="xp-title">UPS — Software Developer Intern</h2>
+            <p>
+              Contributed to the development of full-stack solutions supporting
+              enterprise network operations and security. My primary focus was
+              an access control application built on Cisco Identity Services
+              Engine (ISE), where I developed a user-friendly front end and
+              backend functionality in Python, integrating secure RESTful APIs
+              to automate privilege management and maintain compliance-ready
+              audit logs. I also built an AP Optimization Tool, a web-based
+              dashboard that aggregates and analyzes Mist API data to improve
+              visibility into access point performance across UPS facilities.
+              Through this internship I gained experience in Python, SQL, API
+              integration, web development, and enterprise networking, while
+              strengthening my understanding of cybersecurity and secure
+              infrastructure management at scale.
+            </p>
+          </div>
+          <div class="xp-media">
+            <img
+              src="images/UPSLogo.png"
+              alt="UPS internship environment"
+              class="xp-image"
+            />
+          </div>
+        </section>
+
+        <!-- ===== Experience 2 ===== -->
+        <section class="xp-section revealUp">
+          <div class="xp-text">
+            <h2 class="xp-title">
+              Marist University — Chief Information Officer (Student Gov't)
+            </h2>
+            <p>
+              Oversee all SGA technology and digital services, ensuring reliable
+              operation of platforms such as club email systems, election and
+              award voting tools, and the official SGA website. I lead the IT
+              Council in researching, implementing, and maintaining software
+              solutions that support 200+ student clubs. In this role, I
+              collaborate closely with Marist’s IT departments—including Web
+              Services, Networking, Client Services, and Brightspace—to drive
+              digital initiatives that enhance communication, streamline
+              processes, and foster an innovative and inclusive campus
+              experience.
+            </p>
+          </div>
+          <div class="xp-media">
+            <img
+              src="images/SGAlogo.png"
+              alt="Student Government technology initiatives"
+              class="xp-image"
+            />
+          </div>
+        </section>
+        <!-- ===== Experience 3 ===== -->
+        <section class="xp-section revealUp">
+          <div class="xp-text">
+            <h2 class="xp-title">Freelance — Website Developer</h2>
+            <p>
+              Built and customized portfolio websites for students, enabling
+              them to showcase their projects, technical skills, and career
+              interests in a professional format. Designed clean, responsive
+              layouts that highlighted individual strengths and ensured
+              accessibility across devices. Collaborated closely with clients
+              through regular meetings, gathering requirements and incorporating
+              feedback at each stage of development. Applied an agile workflow
+              to deliver iterative improvements, ensuring the final product
+              matched the client’s vision while meeting technical best
+              practices. In addition to front-end design, integrated tools such
+              as interactive project galleries, contact forms, and resume
+              downloads, making each portfolio both visually appealing and
+              functional for academic and professional use.
+            </p>
+          </div>
+          <div class="xp-media">
+            <img
+              src="images/ComputerIcon.jpg"
+              alt="Freelance web development"
+              class="xp-image"
+            />
+          </div>
+        </section>
+        <!-- ===== Experience 4 ===== -->
+        <section class="xp-section revealUp">
+          <div class="xp-text">
+            <h2 class="xp-title">UPS — Network Tools Automation Intern</h2>
+            <p>
+              Developed a web-based Python application that automated the
+              creation of router configurations, significantly streamlining
+              network operations. This tool improved efficiency for over 100
+              employees and supported the management of more than 1,000 routers.
+              In addition, I programmed and maintained network switches,
+              providing critical support to telecommunication engineers and
+              enhancing the reliability of the network infrastructure.
+            </p>
+          </div>
+          <div class="xp-media">
+            <img
+              src="images/UPSLogo.png"
+              alt="UPS Network environment"
+              class="xp-image"
+            />
+          </div>
+        </section>
+
+        <!-- ===== Experience 5 ===== -->
+        <section class="xp-section revealUp">
+          <div class="xp-text">
+            <h2 class="xp-title">Marist University - Academic Tutor</h2>
+            <p>
+              Provided one-on-one and small group support to students in both
+              computer science and mathematics courses. I worked with students
+              to strengthen their understanding of core concepts and build
+              effective study strategies. In addition to individual tutoring, I
+              facilitated structured review sessions designed to reinforce key
+              skills and prepare students for exams in subjects such as
+              programming, statistics, calculus, and discrete mathematics. This
+              role sharpened my ability to explain complex technical concepts
+              clearly, adapt my teaching style to different learning needs, and
+              foster an encouraging and collaborative learning environment.
+            </p>
+          </div>
+          <div class="xp-media">
+            <img
+              src="images/MaristLogo.webp"
+              alt="Marist University tutoring center"
+              class="xp-image"
+            />
+          </div>
+        </section>
+        <!-- ===== Experience 6 ===== -->
+        <section class="xp-section revealUp">
+          <div class="xp-text">
+            <h2 class="xp-title">
+              UPS - Data Center Implementation and Design Intern
+            </h2>
+            <p>
+              Hands-on experience in a data center environment by preparing,
+              installing, and configuring networking equipment to support daily
+              operations. In this role, I collaborated with network architects
+              and designers on a project to enhance the telecommunications
+              inventory system. My contributions included recreating and
+              updating system records, streamlining workflows, and integrating
+              new equipment into the existing infrastructure. I also developed
+              documentation to support future updates, helping improve
+              efficiency, accuracy, and long-term maintainability of the system.
+            </p>
+          </div>
+          <div class="xp-media">
+            <img
+              src="images/UPSLogo.png"
+              alt="UPS Data Center environment"
+              class="xp-image"
+            />
+          </div>
+        </section>
+        <!-- ===== Experience 7 ===== -->
+        <section class="xp-section revealUp">
+          <div class="xp-text">
+            <h2 class="xp-title">
+              CPD Energy Corporation (Chestnut): Information Technology Intern
+            </h2>
+            <p>
+              Gained practical experience working with networking, software, and
+              hardware systems across multiple store locations. I was
+              responsible for installing and configuring technology, as well as
+              providing hands-on troubleshooting and support to ensure
+              consistent operation of retail systems. This work allowed me to
+              develop skills in diagnosing technical issues, coordinating with
+              teams to resolve problems quickly, and maintaining reliable
+              technology environments that supported daily business operations.
+            </p>
+          </div>
+          <div class="xp-media">
+            <img src="images/CPDLogo.jpg" alt="Chestnut" class="xp-image" />
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        © <span id="year"></span> Jared Kerin · Experience
+      </footer>
+    </div>
+
+    <!-- Your shared JS (typing effect, burger toggle, GSAP revealUp) -->
+    <script src="script/main.js"></script>
+  </body>
+</html>
