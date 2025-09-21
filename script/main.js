@@ -3,7 +3,7 @@
   const target = document.getElementById("typing");
   if (!target) return; // only run on pages with typing element
 
-  const phrases = ["Jared Kerin", "Software Developer", "Cybersecurity Student"];
+  const phrases = ["Jared Kerin", "Fullstack Developer", "Security-Minded Engineer", "Student Leader"];
   const typeDelay = 90; // ms between keystrokes
   const eraseDelay = 50; // ms between backspaces
   const holdDelay = 1200; // pause at end of word
