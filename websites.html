@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en" class="allow-scroll">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jared Kerin | Portfolio Websites</title>
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Re-enable scrolling for this page (your global CSS disables it) -->
+    <style>
+      html.allow-scroll,
+      body {
+        height: auto !important;
+        overflow: auto !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page services-page">
+      <!-- Top header with burger (same structure as Experience page) -->
+      <header class="site-header">
+        <div class="burger-menu">
+          <div
+            class="burger-icon"
+            onclick="toggleMenu()"
+            aria-label="Open menu"
+            aria-expanded="false"
+            role="button"
+            tabindex="0"
+          >
+            <span></span><span></span><span></span>
+          </div>
+
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="websites.html">Portfolio Websites</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <main class="services-wrap" role="main">
+        <!-- SECTION 1: HERO -->
+        <section
+          class="services-section no-media"
+          aria-labelledby="process-title"
+          id="process"
+        >
+          <div class="svc-text">
+            <h1 class="svc-title" id="svc-title">Portfolio Websites</h1>
+            <p class="svc-subtitle">
+              Clean, modern, fast portfolio sites built around your experiences
+            </p>
+
+            <div class="svc-bullets card">
+              <div class="svc-bullets-inner">
+                <ul>
+                  <li><strong>Custom design</strong> tailored to your style</li>
+                  <li>
+                    <strong>Fast loading</strong> and accessible structure
+                  </li>
+                  <li>
+                    <strong>Sections you can add</strong>: Projects, Experience,
+                    Leadership, Contact
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="svc-cta-row">
+              <!-- Replace with your real form link -->
+              <a
+                class="btn-primary"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfZUvnPqdyM0C3FwitojtT4j10paOb6ZzyQna9k4Q4ig9CmWw/viewform?usp=publish-editor"
+                target="_blank"
+                rel="noopener"
+              >
+                Request a Portfolio Website
+              </a>
+            </div>
+
+            <p class="svc-note">
+              Typical turnaround depends on scope and content readiness. If you
+              already have a resume + project descriptions, we move fast.
+            </p>
+          </div>
+        </section>
+
+        <!-- SECTION 2: HOW IT WORKS -->
+        <section
+          class="services-section no-media"
+          aria-labelledby="process-title"
+          id="process"
+        >
+          <div class="svc-text">
+            <h2 class="svc-title" id="process-title">How it works</h2>
+            <p class="svc-subtitle">
+              A simple process that keeps you in control and gets you something
+              you're proud to share.
+            </p>
+
+            <div class="svc-steps">
+              <article class="svc-step card">
+                <h3>1) Quick intake</h3>
+                <p>
+                  You fill out the request form with the pages you would like to
+                  include (about, projects, experience, contact, etc.) along
+                  with style preferences and any content you have ready.
+                </p>
+              </article>
+
+              <article class="svc-step card">
+                <h3>2) Content + layout</h3>
+                <p>
+                  We organize your resume/projects into a strong narrative, then
+                  I draft a layout that matches your request (clean/modern,
+                  bold, dark, minimal, etc.).
+                </p>
+              </article>
+
+              <article class="svc-step card">
+                <h3>3) Build + revisions</h3>
+                <p>
+                  I build the page(s), and then do a revision so the final
+                  result feels sharp.
+                </p>
+              </article>
+
+              <article class="svc-step card">
+                <h3>4) Launch</h3>
+                <p>
+                  You get the site deployed (GitHub Pages FREE / custom domain
+                  if you have one), plus a simple guide to update content later.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div class="svc-media card">
+            <img
+              class="svc-image"
+              src="images/portfolio-process.jpg"
+              alt="Wireframe sketches and layout planning for a portfolio website"
+              loading="lazy"
+            />
+          </div>
+        </section>
+
+        <!-- SECTION 3: FEATURED WORK -->
+        <section
+          class="services-section no-media"
+          aria-labelledby="process-title"
+          id="process"
+        >
+          <div class="svc-text">
+            <h2 class="svc-title" id="work-title">Featured work</h2>
+            <p class="svc-subtitle">
+              A few example styles — click through to see the full sites and
+              details on each one.
+            </p>
+
+            <div class="svc-work-grid">
+              <article class="svc-work card">
+                <a
+                  href="https://benji-kurani.github.io/"
+                  target="_blank"
+                  rel="noopener"
+                  class="svc-work-link"
+                >
+                  <img
+                    src="images/Benji-Website.jpg"
+                    alt="Modern dark portfolio website built by Jared Kerin"
+                    loading="lazy"
+                  />
+                </a>
+
+                <div class="svc-work-body">
+                  <h3>Modern Dark Portfolio</h3>
+                  <p>
+                    Animated dark theme with bold typography along with clean
+                    navigation to projects and experience.
+                  </p>
+                  <p class="svc-tags">HTML • CSS • JS</p>
+                </div>
+              </article>
+
+              <article class="svc-work card">
+                <a
+                  href="https://drewmccauley.github.io/about.html"
+                  target="_blank"
+                  rel="noopener"
+                  class="svc-work-link"
+                >
+                  <img
+                    src="images/Drew-About.jpg"
+                    alt="Minimal clean portfolio website"
+                    loading="lazy"
+                  />
+                </a>
+
+                <div class="svc-work-body">
+                  <h3>Minimal + Clean</h3>
+                  <p>
+                    Simple typography, strong spacing, and rotating photos to
+                    add visual interest while keeping the focus on content.
+                  </p>
+                  <p class="svc-tags">Responsive • Accessibility</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 4: REVIEWS -->
+        <section
+          class="services-section no-media"
+          aria-labelledby="process-title"
+          id="process"
+        >
+          <div class="svc-text">
+            <h2 class="svc-title" id="reviews-title">Client reviews</h2>
+            <p class="svc-subtitle">
+              Real quotes from clients about their experience and how the
+              portfolio has helped them in their job search.
+            </p>
+
+            <div class="svc-reviews">
+              <article class="svc-review card">
+                <div class="svc-review-top">
+                  <div>
+                    <h3>Benji Kurani</h3>
+                    <p class="svc-review-meta">
+                      Intern / Business Finance Student • Portfolio Website
+                    </p>
+                  </div>
+                </div>
+                <p class="svc-quote">
+                  “The site is clean, and the animations are exactly what I
+                  wanted.”
+                </p>
+              </article>
+
+              <article class="svc-review card">
+                <div class="svc-review-top">
+                  <div>
+                    <h3>Andrew McCauley</h3>
+                    <p class="svc-review-meta">
+                      Intern / Business Finance Student • Portfolio Website
+                    </p>
+                  </div>
+                </div>
+                <p class="svc-quote">
+                  “Jared made the process easy and the final site looks
+                  extremely professional. The layout highlights my projects
+                  perfectly and has given me a great advantage in job searches
+                  and interviews.”
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div class="svc-media card">
+            <img
+              class="svc-image"
+              src="images/portfolio-reviews.jpg"
+              alt="Testimonial layout and portfolio preview"
+              loading="lazy"
+            />
+          </div>
+        </section>
+
+        <!-- SECTION 5: FINAL CTA -->
+        <section
+          class="services-section no-media"
+          aria-labelledby="process-title"
+          id="process"
+        >
+          <div class="svc-text">
+            <h2 class="svc-title" id="cta-title">Request yours</h2>
+            <p class="svc-subtitle">
+              If you want a portfolio that’s polished, easy to share, and built
+              around your strengths, fill out the request form and I’ll follow
+              up.
+            </p>
+
+            <div class="svc-cta-card card">
+              <h3>Start a request</h3>
+              <p>
+                The form helps me understand your goals, style, content
+                readiness, and timeline.
+              </p>
+              <a
+                class="btn-primary"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfZUvnPqdyM0C3FwitojtT4j10paOb6ZzyQna9k4Q4ig9CmWw/viewform?usp=publish-editor"
+                target="_blank"
+                rel="noopener"
+              >
+                Open Request Form
+              </a>
+              <p class="svc-small">
+                Prefer email? Reach out via <a href="contact.html">Contact</a>.
+              </p>
+            </div>
+          </div>
+
+          <div class="svc-media card">
+            <img
+              class="svc-image"
+              src="images/portfolio-cta.jpg"
+              alt="A clean contact form on a laptop screen"
+              loading="lazy"
+            />
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        © <span id="year"></span> Jared Kerin · Portfolio Websites
+      </footer>
+    </div>
+
+    <script>
+      // Footer year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Optional: allow Enter key to toggle burger for accessibility
+      document.addEventListener("keydown", (e) => {
+        if (
+          e.key === "Enter" &&
+          document.activeElement?.classList?.contains("burger-icon")
+        ) {
+          toggleMenu();
+        }
+      });
+    </script>
+
+    <!-- Shared JS (must include toggleMenu()) -->
+    <script src="script/main.js"></script>
+  </body>
+</html>
